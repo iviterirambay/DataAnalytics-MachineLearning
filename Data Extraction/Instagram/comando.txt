@@ -1,0 +1,1 @@
+instagram-scraper expresoec -u <my_username> -p <my_password> -t none -m 12 --comments
