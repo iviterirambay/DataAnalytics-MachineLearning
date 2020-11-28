@@ -17,3 +17,9 @@ https://www.nltk.org/howto/collocations.html
 https://github.com/aylliote/senti-py
 
 https://indico.io/blog/docs/indico-api/text-analysis/language-detection/
+
+https://gephi.org/users/download/
+
+https://gephi.org/users/install/
+
+https://carto.com/
