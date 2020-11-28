@@ -86,8 +86,8 @@ def load_corpus(filename):
 
 #python3 document_classification.py 
 
-filename = "Twitter/ecuarauz.json"
-filename_right = "Twitter/LassoGuillermo.json"
+filename = "ecuarauz.json"
+filename_right = "LassoGuillermo.json"
 
 left_corpus = load_corpus(filename)
 n_docs = len(left_corpus)
@@ -105,7 +105,7 @@ corpus = left_corpus + right_corpus
 
 vectorizer = TfidfVectorizer(analyzer='word',ngram_range=(1,3),max_features=1000)
 document_term = vectorizer.fit_transform(corpus)
-joblib.dump(vectorizer,"./models/vectorizer_model.pkl")
+joblib.dump(vectorizer,"vectorizer_model.pkl")
 
 y = y_labels + z_labels
 
@@ -113,7 +113,7 @@ from sklearn.feature_selection import SelectKBest, chi2
 
 k_selector = SelectKBest(chi2, k=500)
 document_term_k_best = k_selector.fit_transform(document_term.toarray(), y)
-joblib.dump(k_selector,"./models/k_best_model.pkl")
+joblib.dump(k_selector,"k_best_model.pkl")
 
 print(document_term_k_best.shape)
 
@@ -121,7 +121,7 @@ n_components = 4
 svd = TruncatedSVD(n_components)
 X_reduced = svd.fit_transform(document_term_k_best)
 print(X_reduced.shape)
-joblib.dump(svd,"./models/svd_model.pkl")
+joblib.dump(svd,"svd_model.pkl")
 
 features_name = [ "pc_" + str(i) for i in range(0,n_components) ]
 df = pd.DataFrame(data=X_reduced,columns=features_name)
@@ -151,6 +151,6 @@ for i,(train_index, test_index) in enumerate(kf.split(x_data,y_data)):
 best_accuracy = np.argsort(scores)[::-1][0]
 clf = clfs[best_accuracy]
 
-joblib.dump(clf,"./models/clf_model.pkl")
+joblib.dump(clf,"clf_model.pkl")
 
 
