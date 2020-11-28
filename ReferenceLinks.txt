@@ -23,3 +23,5 @@ https://gephi.org/users/download/
 https://gephi.org/users/install/
 
 https://carto.com/
+
+https://colab.research.google.com/drive/1yTQOu9d_nL9Xk9KDjPGbx2rMXqq_8Z-s?usp=sharing
