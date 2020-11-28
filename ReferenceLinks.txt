@@ -27,3 +27,8 @@ https://carto.com/
 https://colab.research.google.com/drive/1yTQOu9d_nL9Xk9KDjPGbx2rMXqq_8Z-s?usp=sharing
 
 https://liwc.wpengine.com/  -->computerized text analysis
+
+https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html#sklearn.feature_extraction.text.TfidfVectorizer.transform
+
+https://scikit-learn.org/stable/modules/cross_validation.html
+
