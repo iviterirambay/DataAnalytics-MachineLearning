@@ -44,10 +44,10 @@ def process(tweet):
     tweet = " ".join(tokens)
     return tweet
 
-vectorizer = joblib.load("vectorizer_model.pkl")
-k_selector = joblib.load("k_best_model.pkl")
-svd = joblib.load("svd_model.pkl")
-clf = joblib.load("clf_model.pkl")
+vectorizer = joblib.load("Models\Vectorizer_model.pkl")
+k_selector = joblib.load("Models\k_best_model.pkl")
+svd = joblib.load("Models\svd_model.pkl")
+clf = joblib.load("Models\clf_model.pkl")
 
 document_query = [
     "viva la revolucion ciudadana",
